@@ -28,6 +28,7 @@ object IepScala {
     whileScala()
     doWhileScala()
     funcionesColecciones()
+    funcionSets()
 
   }
 
@@ -249,6 +250,31 @@ object IepScala {
     println(deportes.flatMap( d => d.toUpperCase()))
     println("")
     println(deportes.flatMap( d => d.toUpperCase()).distinct)
+
+  }
+
+  /**
+    *  Sets
+    *   Una serie de elementos donde no puede haber duplicados y no ordenados
+    *   permite funciones map
+    *   set(nIndice) true si encuentra algo false si no encuentra algo equivalente al contains
+    *   Se pueden eliminar elementos del set con set - valor
+    */
+  def funcionSets(): Unit = {
+
+    val set = Set(1,2,3,4)
+
+    println("funcionSets ")
+    println("Pueden contener funciones map  ")
+    println(set)
+    println(set(5))
+    println(set - 2)
+    println(set -- Set(1,2,3,4))
+    println(set)
+    println( set intersect Set(2))
+    println( set union Set(7,8,9))
+    println( set diff Set(2))
+
 
   }
 
