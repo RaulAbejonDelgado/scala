@@ -1,4 +1,4 @@
-import scala.collection.mutable
+
 /**
   * object  ->  singleton pattern(how java static class)
   * class -> can be initializate
@@ -24,6 +24,7 @@ object IepScala {
     funcionaesMatch(mes)
     whileScala()
     doWhileScala()
+    funcionesColecciones()
 
   }
 
@@ -134,6 +135,7 @@ object IepScala {
     */
 
   /**
+    * CAPITULO -15
     * For para iterar sobre colecciones
     * Tipos de colecciones mutables e inmutables
     * //Inmutable
@@ -167,4 +169,66 @@ object IepScala {
     *                ----------------------
     *                IndexedSeq     LinearSeq
     */
+
+  /**
+    * CAPITULO 16 FUNCIONES BASICAS DE UNA COLECCION
+    * Array ES DE TIPO INDEXED SEQ
+    * metodo apply espcial ya que luego podemos utilizarlo sin tener que escribirñp
+    */
+  def funcionesColecciones(): Unit = {
+    println("********funcionesColecciones********\n")
+    //Array de String
+    val juegos = Array("Fornite", "Lineage2", "COD3")
+    //Array de Any al detectar diferentes tipos de datos
+    val deto = Array(1,"prueba")
+    //Array de tipo AnyVal
+    val datoMix = Array(true, 5)
+
+    //prueba llamando al elemento sin apply antes de haberlo definido
+    println("Antes de llamar a la posicion de elemento sin apply")
+    println(juegos(1))
+    println(deto(1))
+    println(datoMix(1))
+
+    //accedemos al elemento del array por su posicion
+    println("Llamando a la posicion del elemento con apply")
+    println(juegos.apply(0))
+    println(deto.apply(1))
+    println(datoMix.apply(0))
+
+    //prueba llamando al elemento sin apply despues de haberlo definido
+    println("Despues de llamar a la posicion de elemento sin apply")
+    println(juegos(2))
+    println(deto(0))
+    println(datoMix(1))
+
+    //longitud de un array
+    println(s"La longitud del array juegos contiene ${juegos.length} elementos")
+
+    //Comprobar si esta vacio
+    println(s"El array juegos esta vacio ?  ${  juegos.isEmpty }")
+
+    //Comprobar si no esta vacio ?
+    println(s"El array juegos no esta vacio ?  ${  juegos.nonEmpty }")
+    println(s"El array juegos no esta vacio ?  ${  !juegos.isEmpty }")
+    println("***************************************************")
+    println("Busqueda por elementos en un array por su valor")
+    println("Si el valor coincide con algun elemento nos devuelve la posicion de su array")
+    println("Si el valor no coincide con algun elemento nos devuelve -1")
+    //sacar indice por valor
+    print("Buscamos el elemento Fornite del array juegos, tiene posicion ")
+    println(juegos.indexOf("Fornite"))
+
+    //sacar indice por valor no existente
+    print("Buscamos el elemento fornite NO EXISTENTE del array juegos, tiene posicion ")
+    println(juegos.indexOf("fornite"))
+
+
+    //programacion funcional
+    println("***Mapas juegos.map(e => println(e)) ***")
+    println("es una funcion (Lambda) nos permite iterar sobre un array y hacer operaciones mas sofisticadas")
+    juegos.map(e => println(e))
+
+
+  }
 }
