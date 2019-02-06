@@ -1,4 +1,5 @@
 import scala.collection.mutable
+import scala.collection.immutable
 /**
   * object  ->  singleton pattern(how java static class)
   * class -> can be initializate
@@ -279,10 +280,12 @@ object IepScala {
   }
 
   /**
-    * leccion 20
+    * leccion 20-21
     */
   def funcionSetsMutalbles(): Unit = {
     val mset = mutable.Set(1,2,3,4,5,6,7,8,9)
+    //val sset = mutable.SortedSet(1,2,3,4,5,6,7,8,9)
+    val sset = immutable.SortedSet(1,2,3,4,5,6,7,8,9)
     println("funcionSetsMutalbles")
     mset += 10
 
@@ -298,6 +301,14 @@ object IepScala {
     println("filter -- no Modifica la coleccion")
     mset.filter( n => n % 2 == 0)
     println(mset)
+
+    println("Leccion 21 sortedSet")
+    println(sset)
+
+    val menosMas = Ordering.fromLessThan[Int]( _ > _)
+    println("Invertimos el orden")
+    val sortedSetInverso = immutable.SortedSet.empty(menosMas) ++ sset
+    println(sortedSetInverso)
   }
 
 }
