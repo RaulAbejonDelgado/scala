@@ -1,0 +1,19 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\scala_sbt_2.12-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul\bilbomatica[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul\bilbomatica[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul\bilbomatica\scalasbt\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul\bilbomatica\scalasbt\Main$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CubeCalculator.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\CubeCalculator.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul\bilbomatica\scalasbt\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul\bilbomatica\scalasbt\Main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul\bilbomatica\scalasbt[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul\bilbomatica\scalasbt[0m
+[0m[[0m[0mdebug[0m] [0m[0m	raul\bilbomatica\scalasbt\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\raul\bilbomatica\scalasbt\Main$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	CubeCalculator$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  C:\raul_workspace\scala\Scala_SBT\target\scala-2.12\classes\CubeCalculator$.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
