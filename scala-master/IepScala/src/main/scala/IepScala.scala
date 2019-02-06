@@ -1,4 +1,4 @@
-
+import scala.collection.mutable
 /**
   * object  ->  singleton pattern(how java static class)
   * class -> can be initializate
@@ -29,6 +29,7 @@ object IepScala {
     doWhileScala()
     funcionesColecciones()
     funcionSets()
+    funcionSetsMutalbles()
 
   }
 
@@ -114,7 +115,7 @@ object IepScala {
 
     while(i < 10){
       println(s"Iterando en while ciclo ${i +1}")
-      i = i + 1
+      i += 1
     }
   }
 
@@ -124,7 +125,7 @@ object IepScala {
 
     do {
       println(s"Iterando en while ciclo ${i +1}")
-      i = i + 1
+      i +=  1
     }while(i < 10)
   }
 
@@ -275,7 +276,28 @@ object IepScala {
     println( set union Set(7,8,9))
     println( set diff Set(2))
 
+  }
 
+  /**
+    * leccion 20
+    */
+  def funcionSetsMutalbles(): Unit = {
+    val mset = mutable.Set(1,2,3,4,5,6,7,8,9)
+    println("funcionSetsMutalbles")
+    mset += 10
+
+    println(mset)
+
+    mset -= 10
+
+    println(mset)
+    println("retain -- Modifica la coleccion")
+    mset.retain( n => n % 2 == 0)
+    println(mset)
+
+    println("filter -- no Modifica la coleccion")
+    mset.filter( n => n % 2 == 0)
+    println(mset)
   }
 
 }
