@@ -8,6 +8,9 @@ object IepScala {
   val flag = true
   val x = 10
   val mes = 1
+  val lista1 = List(1,2,3)
+  val lista2 = List(4,5,6)
+  val lista3 = List(7,8,9)
 
   /**
     * main app method -> app starter
@@ -124,51 +127,6 @@ object IepScala {
     }while(i < 10)
   }
 
-  /**
-    * tipos de datos
-    * AnyVal: Int,Long,Double,Float,Byte,Short,Char,Boolean,Unit
-    * AnyRef: Objetos de java, instancias , Listas, Colecciones
-    * Any: Lo que vendria a ser la clase Object de java
-    * Null: AnyRef sin valor
-    * Nothing: es de todos los tipos de forma simultanea, donde no podremos instanciarlo
-    * Option: Para tratar con valores que aveces pueden ser null o aveces no
-    */
-
-  /**
-    * CAPITULO -15
-    * For para iterar sobre colecciones
-    * Tipos de colecciones mutables e inmutables
-    * //Inmutable
-    * val k = 5
-    * val inmut = java.util.ArrayList
-    * esto significa que podemos hacer las operaciones sobre el arraylist tipicas que nos ofrece el propio tipo de dato ArrayList
-    * pero no podremos volver a definir e.j val inmut = java.util.List
-    * //Mutable
-    * var x = 6
-    * x = 8
-    * colecciones de scala inmutables
-    * scala.collection.inmutable -> colecciones inmutables (TreeSet, Queques. etc)
-    * colecciones de scala mutables
-    * scala.collection.mutable -> coleccions mutables
-    * TIPOS DE COLECCIONES
-    * Tienen un trait algo parecido a las interfaces , la interfaz root se llama Traversable
-    * Elementos de iterable :
-    * Set(Colecciones donde no puede haber elementos duplicados)
-    * Map(clave:valor) no pueden repetirse las claves
-    * Seq(Listas, vectores, rangos ) {
-    * IndexedSeq -> nos permite trabajar con secuancias donde los elementos estan posicionados(obtener posicion de un elemento , cantidad de elementos, etc)
-    * LinearSeq -> secuancias lineares, sabemos que tienen una posicion, en el caso de la listas(cabeza y cola), pilas, colas
-    * }
-    *
-    * Trasversable
-    *       |
-    *   Iterable
-    * ---------------------
-    * Set     Map     Seq
-    *                  |
-    *                ----------------------
-    *                IndexedSeq     LinearSeq
-    */
 
   /**
     * CAPITULO 16 FUNCIONES BASICAS DE UNA COLECCION
@@ -229,6 +187,69 @@ object IepScala {
     println("es una funcion (Lambda) nos permite iterar sobre un array y hacer operaciones mas sofisticadas")
     juegos.map(e => println(e))
 
+    funcionMap()
+    funcionFlatten()
+    funcionFlatMap()
+  }
+
+  def funcionMap(): Unit = {
+
+    val listaEjempl = List(3,5,7,8,9)
+
+    println("Funciones map conbinada con otras funciones ")
+    //funciona lambda o anonima
+    listaEjempl.map(e => println(por2(e)))
+
+    println("Usando _ como elemento generico de los elementos List(1,2,3) ")
+    listaEjempl.map(println(_))
 
   }
+
+  /**
+    *
+    * @param x entero proviniente actualmente de funcionMap
+    * @return el numero entrante x 2
+    */
+  def por2(x : Int) : Int = x * 2
+
+  /**
+    * Lista de listas
+    * flatten nos permite anexar en una unica lista el contenido de varias listas
+    *
+    */
+  def funcionFlatten(): Unit = {
+    val lista = List(lista1,lista2,lista3)
+
+
+    println(lista1)
+    println(lista2)
+    println(lista3)
+
+    println(s"Imprimimos la lista de listas $lista")
+    println("Imprimimos la lista de listas procesada con .flatten ")
+    println(lista.flatten)
+    //Iteramos sobre cada lista y sobre cada lista itereda iteramos sobre sus elementos
+    println("Iteramos sobre cada lista y sobre cada lista itereda iteramos sobre sus elementos")
+    println("Y sobre cada numero lo pasamos a la funcion por2()")
+    println("Y lo usamos flatten donde creamos una lista unica con los valores x 2 de los elementos en una Lista ")
+    print(lista.map{( x: List[Int]) => x.map{ l => por2(l) } }.flatten)
+    println()
+
+  }
+
+  /**
+    * conbinacion entre flattern y map
+    * e.j -> para cuando tenemos listas de listas
+    * e.j2 -> No tiene porque ser una lista de listas
+    */
+  def funcionFlatMap(): Unit = {
+
+    val deportes = List("Futbol", "Basket", "Natacion", "Escalada")
+    println("")
+    println(deportes.flatMap( d => d.toUpperCase()))
+    println("")
+    println(deportes.flatMap( d => d.toUpperCase()).distinct)
+
+  }
+
 }
