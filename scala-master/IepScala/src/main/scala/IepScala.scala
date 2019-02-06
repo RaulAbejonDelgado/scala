@@ -31,6 +31,7 @@ object IepScala {
     funcionesColecciones()
     funcionSets()
     funcionSetsMutalbles()
+    funcionHasMap()
 
   }
 
@@ -309,6 +310,23 @@ object IepScala {
     println("Invertimos el orden")
     val sortedSetInverso = immutable.SortedSet.empty(menosMas) ++ sset
     println(sortedSetInverso)
+  }
+
+  /**
+    * HasMap, map
+    * Python : Diccionarios
+    * Ruby: Hashes
+    * Clave:Valor -> la clave no puede repetirse
+    */
+  def funcionHasMap(): Unit = {
+    val mapa = Map(1 -> "Asier", 2 -> "Borja" , 3 -> "Adrian", 4-> "Raul")
+
+    println(mapa)
+    println(mapa.keySet)
+    println(mapa.values)
+    println(mapa.get(1))
+    println(mapa.get(0))
+    println(mapa.getOrElse() (0))
   }
 
 }
