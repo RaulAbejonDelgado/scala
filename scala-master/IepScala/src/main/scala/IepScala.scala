@@ -1,5 +1,6 @@
 import scala.collection.mutable
 import scala.collection.immutable
+
 /**
   * object  ->  singleton pattern(how java static class)
   * class -> can be initializate
@@ -12,6 +13,9 @@ object IepScala {
   val lista1 = List(1,2,3)
   val lista2 = List(4,5,6)
   val lista3 = List(7,8,9)
+  val mapa = Map(0 -> "Yo el burro por delante",1 -> "Asier", 2 -> "Borja" , 3 -> "Adrian", 4-> "Raul")
+  val mapaMutable = mutable.Map(1 -> "SpringBoot" , 2 -> "Spring batch", 3 -> "Spring data")
+
 
   /**
     * main app method -> app starter
@@ -32,6 +36,9 @@ object IepScala {
     funcionSets()
     funcionSetsMutalbles()
     funcionHasMap()
+    funcionHasMap2()
+    funcionHasMapMutable()
+    operacionFor()
 
   }
 
@@ -319,7 +326,6 @@ object IepScala {
     * leccion 22
     */
   def funcionHasMap(): Unit = {
-    val mapa = Map(0 -> "Yo el burro por delante",1 -> "Asier", 2 -> "Borja" , 3 -> "Adrian", 4-> "Raul")
     println("*********Leccion 22 funcionHasMap*******\n")
     println("El manejo del indice en los mapas a diferencia de los arrays lo marca el primer elemento del diccionario")
     println(s"mapa -> $mapa")
@@ -341,5 +347,58 @@ object IepScala {
     println(s"mapa.contains(11) -> ${mapa.contains(11)}")
 
   }
+
+  /**
+    * Leccion 23
+    * Manipulacion de mapas
+    */
+  def funcionHasMap2(): Unit = {
+
+    println("******************funcionHasMap2*********")
+    println("insertar en un mapa nuevo ya que este es inmutable")
+    println("En la creacion del nuevo mapa podemos aprovechar para añadir nuevos elementos")
+    println("e.j -> val mapaPlus =mapa + (12 -> \"Alberto\", 13 -> \"Jaime\")")
+    val mapaPlus =mapa + (12 -> "Alberto", 13 -> "Jaime")
+    println(s"mapaPlus -> ${mapaPlus}")
+    println("Eliminar elementos ? (No eran inmutables ?)")
+    println("Si !!! Por eso debemos guardar el resultado de dicha operacion en nuevo mapa)")
+    println(" val mapaLess = mapaPlus - 4")
+    val mapaLess = mapaPlus - 4
+    println(s"mapaLess -> ${mapaLess}")
+    println("Juntar 2 o mas mapas en un nuevo mapa")
+    println("Operacion de juntar 2 diccionarios en un nuevo no me sale\n")
+    println("Si por un casual los indices de algun elemento de ambos diccionarios coincide se sobre-escribiran")
+    val mapaTest1 = Map(1 ->"python", 2 -> "scala", 3 -> "java")
+    val mapaTest2 = Map(4 -> "ECMA6", 5 -> "PHP")
+    val mergedMap = mapaTest1 ++ mapaTest2
+    println(s"val mergedMap = mapaTest1 ++ mapaTest2 -> ${mergedMap}")
+
+  }
+
+  def funcionHasMapMutable(): Unit = {
+    println("******************funcionHasMapMutable*********")
+    println(s"mapaMutable -> $mapaMutable")
+    println("Para sustituir o añadir un elemento del mapa mutable por otro elemento usaremos mapaMutable.+=( 3 -> \"Modificado ><\")")
+    println("Si nos coincide el valor del indice sera remplazado, si no sera añadido")
+    mapaMutable.+=( 3 -> "Modificado ><")
+    println(mapaMutable)
+    println("Formas de hacer lo mismo: ")
+    println("e.j - mapaMutable.put(3, \"Nuevo elemento\")")
+    println("e.j - mapaMutable(indice) = \"Nuevo Elemento\"")
+    println("e.j - mapaMutable ++= Map(6 -> \"Nuevo Elemento\")")
+    println("Eliminar elementos")
+    println("e.j - mapaMutable -= 2 (donde 2 seria el numero del indice)")
+    mapaMutable -= 2
+    println(mapaMutable)
+    println("Limpiar diccionarios e.j  mapaMutable.clear")
+    mapaMutable.clear()
+    println(mapaMutable)
+
+  }
+
+  /**
+    * leccion 24
+    */
+  def operacionFor(): Unit = ???
 
 }
