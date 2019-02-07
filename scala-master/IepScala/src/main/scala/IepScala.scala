@@ -398,7 +398,25 @@ object IepScala {
 
   /**
     * leccion 24
+    * cliclos for
     */
-  def operacionFor(): Unit = ???
+  def operacionFor(): Unit = {
+    println("*********Leccion 24 operacionFor*********\n")
+    //println("foreach -> lenguajes.foreach( e =>println(s"$e es un lenguaje de programacion") ))
+    val lenguajes = Seq("java", "scala", "python", "js", "c")
+    val meses = Seq("enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre")
+    val dias = Seq.range(1 , 30)
+    println("lenguajes.foreach( e =>println(e)")
+    lenguajes.foreach( e =>println(s"$e es un lenguaje de programacion") )
 
+    println("***('clasico') for  (e <- lenguajes)\n")
+    for  (e <- lenguajes){
+      println(s"$e es un lenguaje de programacion")
+    }
+
+    println("****OPERACIONES CARTESIANAS*****")
+    for  (l <- meses; f <- dias){
+      println(s"$f de $l")
+    }
+  }
 }
