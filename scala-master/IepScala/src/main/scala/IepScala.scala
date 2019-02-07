@@ -285,7 +285,6 @@ object IepScala {
     */
   def funcionSetsMutalbles(): Unit = {
     val mset = mutable.Set(1,2,3,4,5,6,7,8,9)
-    //val sset = mutable.SortedSet(1,2,3,4,5,6,7,8,9)
     val sset = immutable.SortedSet(1,2,3,4,5,6,7,8,9)
     println("funcionSetsMutalbles")
     mset += 10
@@ -317,16 +316,30 @@ object IepScala {
     * Python : Diccionarios
     * Ruby: Hashes
     * Clave:Valor -> la clave no puede repetirse
+    * leccion 22
     */
   def funcionHasMap(): Unit = {
-    val mapa = Map(1 -> "Asier", 2 -> "Borja" , 3 -> "Adrian", 4-> "Raul")
+    val mapa = Map(0 -> "Yo el burro por delante",1 -> "Asier", 2 -> "Borja" , 3 -> "Adrian", 4-> "Raul")
+    println("*********Leccion 22 funcionHasMap*******\n")
+    println("El manejo del indice en los mapas a diferencia de los arrays lo marca el primer elemento del diccionario")
+    println(s"mapa -> $mapa")
+    println(s"mapa.keyset -> ${mapa.keySet}")
+    println(s"mapa.values -> ${mapa.values}")
+    println("Si al invocar por el `indice` del elemento obtenemos coincidencia nos devuelve un tipo some, si no tipo none")
+    println(s"mapa.get(1) -> ${mapa.get(1)}")
+    println(s"mapa.get(0) -> ${mapa.get(0)}")
+    println(s"mapa.get(11) -> ${mapa.get(11)}")
+    println("Tambien podemos buscar el indice sin get ")
+    println(s"mapa(0) -> ${mapa(0)}")
+    println(s"mapa(11) -> si usamos el indice en el map de la siguiente manera, debemos estar seguros")
+    println("De que el elemento exista porque de no ser asi provocaremos java.util.NoSuchElementException: key not found.\n")
+    println("getOrElse nos permite devolver una respuesta en casa de que la primer match no resulte ok")
+    println(s"mapa.getOrElse(12,'No existe') -> ${mapa.getOrElse(12,"No existe")}")
+    println(s"mapa.getOrElse(3,'No existe') -> ${mapa.getOrElse(3,"No existe")}")
+    println("Podemos usar contains para evaluar su contenido mediante un valor booleano")
+    println(s"mapa.contains(3) -> ${mapa.contains(3)}")
+    println(s"mapa.contains(11) -> ${mapa.contains(11)}")
 
-    println(mapa)
-    println(mapa.keySet)
-    println(mapa.values)
-    println(mapa.get(1))
-    println(mapa.get(0))
-    println(mapa.getOrElse() (0))
   }
 
 }
