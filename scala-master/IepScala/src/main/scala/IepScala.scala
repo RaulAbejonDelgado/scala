@@ -1,5 +1,8 @@
+import CustomXmlReader.getClass
+
 import scala.collection.mutable
 import scala.collection.immutable
+import scala.xml.XML
 
 /**
   * object  ->  singleton pattern(how java static class)
@@ -39,6 +42,8 @@ object IepScala {
     funcionHasMap2()
     funcionHasMapMutable()
     operacionFor()
+    xmlOperationReadFromFile()
+    xmlOperationWriteToFile()
 
   }
 
@@ -418,5 +423,19 @@ object IepScala {
     for  (l <- meses; f <- dias){
       println(s"$f de $l")
     }
+  }
+
+  def xmlOperationReadFromFile() = {
+
+    val xmlData = XML.load("main/resources/test.xml")
+    println(xmlData)
+    val nombre = (xmlData \ "nombre").text
+    println(nombre)
+
+  }
+
+  def xmlOperationWriteToFile(): Unit = {
+
+
   }
 }
