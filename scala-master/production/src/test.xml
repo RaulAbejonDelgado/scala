@@ -1,0 +1,7 @@
+<persona>
+    <nombre>Raul</nombre>
+    <apellidos>Abejon</apellidos>
+    <edad>35</edad>
+    <telefono tipo="mobil">nº mobil</telefono>
+</persona>
+

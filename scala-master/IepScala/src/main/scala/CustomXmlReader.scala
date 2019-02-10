@@ -1,10 +1,10 @@
-import xml._
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array
+
+import scala.xml.XML
 
 object CustomXmlReader {
 
-  def main(args: Array[String]): Unit = {
-    xmlOperationReadFromFile()
-  }
+
   def xmlOperationReadFromFile() = {
 //    /home/drohne/scala_projects/scala-master/IepScala/src/main/resources/test.xml
     val xmlData = XML.load("main/resources/test.xml")
