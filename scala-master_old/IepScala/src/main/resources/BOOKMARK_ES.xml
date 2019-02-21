@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bookmarks country="ES">
+    <Category>
+        <name>Abstract</name>
+        <values>
+            <value>Primera Página</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Amendments</name>
+        <values>
+            <value>Adiciones</value>
+            <value>Modificaciones</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Bibliography</name>
+        <values>
+            <value>Primera Página</value>
+            <value>Biblio./Description</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Claims</name>
+        <values>
+            <value>Reivindicaciones</value>
+            <value>Claims</value>
+            <value>Claim</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Description</name>
+        <values>
+            <value>Descripción</value>
+            <value>Description</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Descriptidon</name>
+        <values>
+            <value>Descripción</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Drawings</name>
+        <values>
+            <value>Dibujos</value>
+            <value>Drawing</value>
+        </values>
+    </Category>
+    <Category>
+        <name>Search report</name>
+        <values>
+            <value>IET</value>
+            <value>Search Report</value>
+        </values>
+    </Category>
+    <Category>
+        <name>DNA sequence</name>
+        <values>
+        </values>
+    </Category>
+    <Category>
+        <name>Applicant citations</name>
+        <values>
+        </values>
+    </Category>
+</Bookmarks>
+
+
