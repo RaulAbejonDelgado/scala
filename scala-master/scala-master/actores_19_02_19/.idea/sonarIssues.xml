@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/amf/src/main/resources/database/load.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/amf/src/main/resources/database/schema.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/actors/db/RequestDbActor.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/dataaccess/daos/BookmarksDao.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/dataaccess/daos/CountriesDao.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/dataaccess/queries/BookmarksQueries.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/dataaccess/queries/CountriesQueries.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/model/Dbo.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/main/scala/org/epo/dataresources/molaserver/web/api/controller/ApiController.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="C:/development/intelij-workspaces-git/data-resource/mola-server/war/src/test/scala/org/epo/dataresources/molaserver/actors/bre/BreLookupActorTest.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/build.sbt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/scala/ActorExample1.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/test/scala/AkkaQuickStartTest.scala">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../akka-distributed-workers-scala/readme.md">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../akka-quickstart-java/src/main/java/com/lightbend/akka/sample/AkkaQuickstart.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../akka-quickstart-java/src/test/java/com/lightbend/akka/sample/AkkaQuickstartTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
